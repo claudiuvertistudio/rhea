@@ -1256,7 +1256,17 @@ body .separator-one .green-btn:hover {
 .separator-one {
 	background: #f4f7f9;
 }
-.separator-one .button-container {
+.separator-one h3.text {
+    font-weight: 300;
+    font-family: "Raleway";
+    padding-bottom: 25px;
+    line-height: 40px;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    color: #404040;
+}
+.separator-one .zerif-buttons-container {
 	display: inline-block;
 }
 .separator-one .section-header {

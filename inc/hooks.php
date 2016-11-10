@@ -149,3 +149,19 @@ function zerif_before_header_function() {
 		echo '</div>';
 	}
 }
+
+/* Add a second button in Ribbon with bottom button */
+add_action( 'zerif_ribbon_with_bottom_button_after_button','zerif_ribbon_with_bottom_button_after_button_function' );
+function zerif_ribbon_with_bottom_button_after_button_function() {
+	$rhea_second_button_label = get_theme_mod('rhea_second_button_label');
+	$rhea_second_button_link = get_theme_mod('rhea_second_button_link');
+	if ( $rhea_second_button_label && $rhea_second_button_link ) {
+		echo '<div data-scrollreveal="enter right after 0s over 1s" class="zerif-buttons-container">';
+			echo '<a href="'.esc_url( $rhea_second_button_link ).'" class="btn btn-primary custom-button outline-btn right-button">'.wp_kses_post( $rhea_second_button_label ).'</a>';
+		echo '</div>';
+	}elseif ( is_customize_preview() ) {
+		echo '<div data-scrollreveal="enter right after 0s over 1s" class="zerif-buttons-container zerif_hidden_if_not_customizer">';
+			echo '<a href="" class="btn btn-primary custom-button outline-btn right-button"></a>';
+		echo '</div>';
+	}
+}
