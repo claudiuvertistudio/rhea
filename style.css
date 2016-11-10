@@ -1103,6 +1103,13 @@ button {
 body .purchase-now .red-btn {
   background-color: rgba( 255,255,255,0 );
 }
+#ribbon_right .red-btn {
+    border: 1px solid #fff;
+}
+#ribbon_right .red-btn:hover {
+    background: #ffffff;
+    color: #2bb6b6 !important;
+}
 body .purchase-now .outline-btn:hover {
   background-color: #fff;
   color: #2bb6b6 !important;
