@@ -105,3 +105,47 @@ if ( $currentThemeName == 'Zerif PRO' ) {
 		return 'rgba( 255,255,255,0 )';
 	}
 }
+
+/*
+ * Remove footer address, phone and email sections by making the default values empty
+ */
+add_filter( 'zerif_address_default_filter','rhea_empty_footer_sections' );
+add_filter( 'zerif_address_icon_default_filter','rhea_empty_footer_sections' );
+add_filter( 'zerif_email_default_filter','rhea_empty_footer_sections' );
+add_filter( 'zerif_email_icon_default_filter','rhea_empty_footer_sections' );
+add_filter( 'zerif_phone_default_filter','rhea_empty_footer_sections' );
+add_filter( 'zerif_phone_icon_default_filter','rhea_empty_footer_sections' );
+
+function rhea_empty_footer_sections() {
+	return '';
+}
+
+/* Add custom id to the header tag */
+add_filter( 'zerif_header_id_filter','zerif_header_id_filter_function' );
+function zerif_header_id_filter_function() {
+	return 'sticky-header';
+}
+
+/* Add custom class to the header tag */
+add_filter( 'zerif_header_class_filter','zerif_header_class_filter_function' );
+function zerif_header_class_filter_function() {
+	return 'holder-header';
+}
+
+/* Close the header tag sooner */
+add_action( 'zerif_bottom_header','zerif_bottom_header_function' );
+function zerif_bottom_header_function() {
+	echo '</header>';
+}
+
+/* Display the homepage top menu */
+add_action( 'zerif_before_header','zerif_before_header_function' );
+function zerif_before_header_function() {
+	if ( has_nav_menu('homepage-top') ) {
+		echo '<div class="full-navigation">';
+		echo '<nav>';
+		wp_nav_menu( array('theme_location' => 'homepage-top', 'container' => false, 'menu_class' => 'main-nav-list' ) );
+		echo '</nav>';
+		echo '</div>';
+	}
+}

@@ -34,10 +34,6 @@ if( !function_exists( 'rhea_lite_customizer' ) ) {
 		$wp_customize->get_section('header_image')->title = 'Background Image';
 		$wp_customize->get_section('header_image')->priority = 2;
 
-		// Change customize panels' title
-		$wp_customize->get_panel($hero_panel)->title = "Hero Section";
-		$wp_customize->get_panel($focus_panel)->title  = "Features Section";
-
 		$wp_customize->add_setting( 'rhea_parallax_show', array(
 			'sanitize_callback' => 'zerif_sanitize_checkbox',
 			'default' => 1,
