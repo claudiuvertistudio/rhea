@@ -1118,6 +1118,15 @@ body .separator-one .green-btn:hover {
 #footer {
   background-color: rgba(35, 40, 45,1);
 }
+#footer .copyright {
+    background: #272727;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#footer .social {
+    float: right;
+    margin: 0px !important;
+}
 .bottom-footer {
   padding: 20px 0;
 }
@@ -1133,6 +1142,8 @@ body .separator-one .green-btn:hover {
 }
 .zerif-copyright-box {
 	color: rgba( 255,255,255,.6 );
+    width: auto;
+    float: left;
 }
 .bottom-footer a,
 .social li a {
@@ -1167,6 +1178,7 @@ body .separator-one .green-btn:hover {
 .footer-widget-wrap > .container {
   text-align: left;
 }
+
 
 /* About Company Widget */
 .rhea-company-logo {

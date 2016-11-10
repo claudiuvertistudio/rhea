@@ -363,3 +363,14 @@ function rhea_big_title_text_function() {
 	endif;
 	
 }
+
+add_filter('zerif_address_default_filter','rhea_empty_footer_sections');
+add_filter('zerif_address_icon_default_filter','rhea_empty_footer_sections');
+add_filter('zerif_email_default_filter','rhea_empty_footer_sections');
+add_filter('zerif_email_icon_default_filter','rhea_empty_footer_sections');
+add_filter('zerif_phone_default_filter','rhea_empty_footer_sections');
+add_filter('zerif_phone_icon_default_filter','rhea_empty_footer_sections');
+
+function rhea_empty_footer_sections() {
+	return '';
+}
