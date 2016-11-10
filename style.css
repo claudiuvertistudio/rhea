@@ -1264,7 +1264,7 @@ body .separator-one .green-btn:hover {
     font-size: 45px;
     text-transform: uppercase;
     margin-top: 15px;
-    color: #404040;
+    color: #404040 !important;
 }
 .separator-one .zerif-buttons-container {
 	display: inline-block;
